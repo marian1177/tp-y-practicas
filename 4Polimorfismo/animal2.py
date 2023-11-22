@@ -7,13 +7,13 @@ class Animal:
     def desc_raza(self):
         return (f" mi raza es {self.raza}")
     def hablar(self):
-        pass
+        pass                #declaracion del metodo sin implementar
     
 class Perro(Animal):
     def __init__(self,nombre,edad,raza):
         super().__init__(nombre,edad,raza)
     def hablar(self):
-        return "Perro esta ladrando"
+        return "Perro esta ladrando"   #se implementa el metodo
 
 
 class Gato(Animal):
@@ -24,7 +24,7 @@ class Gato(Animal):
     def ronronear(self):
         return "el gato esta ronroneando"
 
-    def hablar(self):
+    def hablar(self):               #se sobreescribe el metodo
         return "Gato esta maullando"
 
 class Pajaro(Animal):
@@ -32,7 +32,7 @@ class Pajaro(Animal):
         super().__init__(nombre,edad)
         self.color_plumas = color_plumas
 
-    def hablar(self):
+    def hablar(self):           # se sobreescribe nuevamente
         return "Pajara esta silbando"
 
 cujo = Perro("cujo",1,"ovejero aleman")

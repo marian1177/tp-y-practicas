@@ -1,10 +1,10 @@
-class Empleado:
+class Empleado:             #clase comun a todos los empleados con datos basicos
     def __init__(self,nombre, salario, departamento):
         self.nombre = nombre
         self.salario = salario
         self.departamento = departamento
 
-    def enrolamiento(self):
+    def enrolamiento(self): 
         return f"se registra al empleado de nombre: {self.nombre}"
 
 
@@ -16,7 +16,7 @@ class Gerente(Empleado):
     def proyecto(self):
         return "gerente inicia proyecto"
 
-
+        #obejtos con atributos heredados y 1 extra que le es propio
 class Trabajador(Empleado):
     def __init__(self,nombre,salario, departamento,gremio):
         super().__init__(nombre,salario,departamento)

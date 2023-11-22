@@ -7,7 +7,7 @@ class Empleado:
     def enrolamiento(self):
         return f"se registra al empleado de nombre: {self.nombre}"
     
-    def calcular_salario(self):
+    def calcular_salario(self): #metodo declarado ya implementado con una leyenda
         return "se calcula el salario segun cada empleado"
 
 
@@ -19,7 +19,7 @@ class Gerente(Empleado):
     def proyecto(self):
         return "gerente inicia proyecto"
 
-    def calcular_salario(self):
+    def calcular_salario(self):  #se sobreescribe el metodo 
         if self.salario < 600000:
             self.salario = Trabajador(self.salario)+400000
         return "el salario final del Gerente es {self.salario}"
@@ -33,7 +33,7 @@ class Trabajador(Empleado):
     def trabajo(self):
         return f"empleado {self.nombre} incia jornada laboral"
 
-    def calcular_salario(self):
+    def calcular_salario(self):  # se sobre escribe el metodo con otras validaciones
        
         if self.salario < 200000:
             self.salario = 200000

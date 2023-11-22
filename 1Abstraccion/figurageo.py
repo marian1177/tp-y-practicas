@@ -1,8 +1,8 @@
-import random
-class FigurasGeometricas():
+import random       #se importa un random para generacion de datos numericos
+class FigurasGeometricas(): 
 
     def calc_area(self):
-        pass
+        pass                #metodos abstractos que seran utilizados en las subclases
     def calc_per(self):
         pass
 
@@ -10,10 +10,10 @@ class Circulo(FigurasGeometricas):
 
     def __init__(self,radio): 
         
-        self.radio = radio
+        self.radio = radio          #atributo especifico de circulo
 
     def calc_area(self):
-        return 3.14*self.radio**2
+        return 3.14*self.radio**2      #implementacion de los metodos declarados
     
     def calc_per(self):
         return self.radio*2*3.14
@@ -23,7 +23,7 @@ class Rectangulo(FigurasGeometricas):
 
     def __init__(self,base,altura):
         self.base = base
-        self.altura = altura
+        self.altura = altura        
     
     def calc_area(self):
         return self.base*self.altura

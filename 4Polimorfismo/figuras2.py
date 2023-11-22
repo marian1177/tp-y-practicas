@@ -2,7 +2,7 @@
 class FigurasGeometricas():
 
     def calc_area(self):
-        pass
+        pass                    #metodos declarados sin implementar
     def calc_per(self):
         pass
     
@@ -16,7 +16,7 @@ class Circulo(FigurasGeometricas):
         self.radio = radio
 
     def calc_area(self):
-        return 3.14*self.radio**2
+        return 3.14*self.radio**2           # se implementan los metodos
     
     def calc_per(self):
         return self.radio*2*3.14
@@ -29,7 +29,7 @@ class cuadrado(FigurasGeometricas):
     def __init__(self,lado):
         self.lado = lado
 
-    def mostrar_datos(self):
+    def mostrar_datos(self):                # se sobreescribe metodo
         return "el lado del cuadrado es {self.lado}"
     
 
