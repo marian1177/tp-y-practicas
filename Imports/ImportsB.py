@@ -1,8 +1,10 @@
 
 
-#3.4. error para importacion circular
+# 3.4. error para importacion circular
 #from ImportsA import *
 
-def Funcion_ajena_de_datos(n1,n2):
-
-    return n1+n2
+#3.1    3.2     3.3     3.5.    3.6    3.7
+#class ClaseModuloB():
+#       def funcion_ModuloB():
+#        var= "variable string del modulo ImportsB"
+#        return (var)

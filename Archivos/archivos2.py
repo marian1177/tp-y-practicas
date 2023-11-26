@@ -2,14 +2,19 @@ import csv
 
 
 with open('archivo83.csv', 'r') as archivo:
-    lector = csv.DictReader(archivo)
+    lector = csv.DictReader(archivo, delimiter='\t')
     
     notas =0
     
     for fila in lector:
         
-        dato = (fila)
-        print (f"{dato}" )
+        if 'Nota' in fila and fila['Nota'].strip():
+            # Convierte el valor de la nota a entero
+            nota = int(fila['Nota'].strip())
+            print(nota)
+        else:
+            print("error de recooleccion de info:",fila)
+        
         
 archivo.close()
 
