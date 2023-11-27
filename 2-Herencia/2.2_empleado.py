@@ -1,4 +1,5 @@
-class Empleado:             #clase comun a todos los empleados con datos basicos
+class Empleado:   
+    #clase comun a todos los empleados con datos basicos         
     def __init__(self,nombre, salario, departamento):
         self.nombre = nombre
         self.salario = salario
@@ -16,8 +17,9 @@ class Gerente(Empleado):
     def proyecto(self):
         return "gerente inicia proyecto"
 
-        #obejtos con atributos heredados y 1 extra que le es propio
+       
 class Trabajador(Empleado):
+    # Obejtos con atributos heredados y 1 extra que le es propio
     def __init__(self,nombre,salario, departamento,gremio):
         super().__init__(nombre,salario,departamento)
         self.gremio = gremio

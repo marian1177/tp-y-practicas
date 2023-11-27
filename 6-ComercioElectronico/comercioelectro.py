@@ -4,7 +4,8 @@ class Producto:  #clase basica del producto con los datos basicos
         self.tipo = precio
         self.stock = stock
         self.tipo = tipo
-        self.gondola = [nombre, precio, stock, tipo]  #una lista que guardara los datos , se separan para utilizar gondola con indice
+        #una lista que guardara los datos , se separan para utilizar gondola con indice
+        self.gondola = [nombre, precio, stock, tipo]  
 
     def mostrar_producto(self):
         return ("el producto seleccionado es {self.nombre} del sector {self.tipo}")
@@ -21,7 +22,8 @@ class Carrito(Producto): #clase que trayendo los datos de la clase Producto los 
         self._totales_prod = []
 
     def agregar_producto(self,producto):
-        self._totales_prod.append(self.producto.nombre) # se guarda solo el nombre del producto para poder contarlos
+        self._totales_prod.append(self.producto.nombre) 
+        # se guarda solo el nombre del producto para poder contarlos
 
         # se puede eliminar productos
     def eliminar_producto(self):
@@ -45,11 +47,13 @@ class Cliente: #clase de clientes para datos de acceso al servicio
     def verificar_clave(self):
         return self._clave
 
-    def seteo_de_clave(self, nueva_clave):  # se puede modificar la clave si es distinta a la anterior y tiene mas de 8 caracteres
+    def seteo_de_clave(self, nueva_clave):  
+        # se puede modificar la clave si es distinta a la anterior y tiene mas de 8 caracteres
         if nueva_clave != self._clave and len(self._clave) > 8:
             self._clave = nueva_clave
 
-    def modificar_producto(self):  #metodo que segun el tipo de acceso podria modificar algun producto, pasada a administrador
+    def modificar_producto(self):  
+        #metodo que segun el tipo de acceso podria modificar algun producto, pasada a administrador
         pass
 
     def datos_cliente(self):
@@ -64,7 +68,8 @@ class Administrador(Cliente):
     def __init__(self, nombre, clave, nivel_acceso, control):
         super().__init__(nombre, clave, nivel_acceso)
         self.control = control
-                                                                #se heredan datos y se implementa el metodo de modificar productos segun el acceso
+
+     #se heredan datos y se implementa el metodo de modificar productos segun el acceso                                                           
     def modificar_producto(self, nuevo_nombre, nuevo_stock):
         if self.nivel_acceso == 1:
             Producto.nombre = nuevo_nombre

@@ -6,7 +6,8 @@ class Vehiculo:
         self._modelo = modelo
         self._veloz_max = veloz_max
 
-    @property #propiedades comunes de vehiculo
+    @property 
+    #propiedades comunes de vehiculo
     def mostrar_basico(self):
             return self._marca, self._modelo, self._veloz_max
     #a modo de simplificar no se aplica metodo de modifcacion
@@ -15,11 +16,13 @@ class Vehiculo:
 class Coche(Vehiculo):
     
         def __init__(self,marca,modelo,veloz_max,puertas,ventanas):
-            super().__init__(marca,modelo,veloz_max) # se hereda a findes de funcion de print
+            # Se hereda a findes de funcion de print
+            super().__init__(marca,modelo,veloz_max)
+            #abstraccion atributos especificos de cada objeto
             self.puertas = puertas
-            self.ventanas =ventanas  #abstraccion atributos especificos de cada objeto
-
-        def despliega_techo(self):    #abstraccion, metodo declarado no implementado
+            self.ventanas =ventanas  
+        #abstraccion, metodo declarado no implementado
+        def despliega_techo(self):    
             pass
          
 

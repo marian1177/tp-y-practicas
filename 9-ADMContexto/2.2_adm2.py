@@ -1,5 +1,5 @@
 import random
-from Abstraccion.adm2b import funcionajena
+from  Abstraccion.adm2b import funcionajena
 n = random.randint(1,10)
 
 def funcionX(): #bloque de codigo cualquiera que se use para el administrador
