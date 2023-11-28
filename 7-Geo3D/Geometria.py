@@ -6,10 +6,11 @@ class Punto3D:
 
 
 class Figura3D():  # clase con los metodos abstractos
-    pi = 3.14 #dato que sera compartido con las subclases
+    pi = 3.14  # dato que sera compartido con las subclases
+
     def __init__(self, punto_x, punto_y, punto_z):
-        self.punto = Punto3D(punto_x, punto_y, punto_z) #pequeña composicion 
-    
+        self.punto = Punto3D(punto_x, punto_y, punto_z)  # pequeña composicion
+
     def calcular_volumen(self):
         pass
 
@@ -32,7 +33,6 @@ class Cubo(Figura3D):
 
 
 class Esfera(Figura3D):
-    
 
     def calculo_volumen(self):
         # formula de volumen = V = 4/3 π r
@@ -46,6 +46,7 @@ class Esfera(Figura3D):
             input("favor de ingresar el radio para calcular la superficie: "))
         return "la superficie del esfera es: ", 4*self.pi*radio*2
 
+
 class Cilindro(Figura3D):
 
     def __init__(self, punto_x, punto_y, punto_z):
@@ -55,23 +56,23 @@ class Cilindro(Figura3D):
         # formula de volumen = π r² h
         radio = int(
             input("favor de ingresar el radio para calcular la superficie: "))
-        return "el volumen del cilindro es :", self.pi* radio* self.punto.punto_y
+        return "el volumen del cilindro es :", self.pi * radio * self.punto.punto_y
 
     def calculo_superficie(self):
         radio = int(
             input("favor de ingresar el radio para calcular la superficie: "))
         # formula de superficie = 2π r h + 2π r²
-        return "la superficie del cilindro es: ", 2*self.pi*self.punto.punto_y+2*self.pi*radio**2 
-    
+        return "la superficie del cilindro es: ", 2*self.pi*self.punto.punto_y+2*self.pi*radio**2
 
-cub = Cubo(3,4,6)
+
+cub = Cubo(3, 4, 6)
 print(cub.calculo_volumen())
 print(cub.calculo_superficie())
 
-esf = Esfera(2,0,0)
+esf = Esfera(2, 0, 0)
 print(esf.calculo_volumen())
 print(esf.calculo_superficie())
 
-cil = Cilindro(0,4,0)
+cil = Cilindro(0, 4, 0)
 print(cil.calculo_volumen())
 print(cil.calculo_superficie())

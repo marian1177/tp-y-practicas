@@ -31,6 +31,7 @@ class Estudiante:
         self.edad += 1
         return self.edad
 
-alumno=(Estudiante("mariano", 34,7))
-print (alumno.mostrar_informacion())
-print (alumno.promedio())
+
+alumno = (Estudiante("mariano", 34, 7))
+print(alumno.mostrar_informacion())
+print(alumno.promedio())

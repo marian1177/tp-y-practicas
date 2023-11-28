@@ -6,12 +6,12 @@ with open("archivoLectura2.txt", "r") as archivo2, open("archivoLectura3.txt", "
 
     with open("archivoEscritura2.txt", "w") as archivoW:
         archivoW.write(f"{contenido2} \n"
-                      "---------------------------------------------\n")
+                       "---------------------------------------------\n")
         archivoW.write(f"{contenido3} \n"
                        "---------------------------------------------\n")
         archivoW.write(f"{contenido4} \n")
 
 
 archivo2.close()
-archivo3.close()    
+archivo3.close()
 archivo4.close()

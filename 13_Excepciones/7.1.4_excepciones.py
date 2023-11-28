@@ -3,10 +3,8 @@
 
 try:
     archivo = open("archivo.txt", "r")
-except FileNotFoundError:
-    print("El archivo no existe")
-else:
+    if not archivo:
+        raise FileNotFoundError("Archivo no existente")
 
-    archivo.read()
-    print("se lee el archivo")
-    archivo.close()
+except FileNotFoundError:
+    print(FileNotFoundError)

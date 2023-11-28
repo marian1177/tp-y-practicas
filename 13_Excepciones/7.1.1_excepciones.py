@@ -1,17 +1,19 @@
 def division(n1, n2):
-    
-    if n2==0:
-        raise Exception("error en digito 2 es cero")
+    if n2 == 0:
+         raise ValueError("error en digito 2 es cero")
 
-    else:
-        return n1/n2
+    return n1/n2
+
+
+n1 = int(input("ingrese n1"))
+n2 = int(input("ingrese n2"))
 
 try:
-    division(3,6)
+
+    division(n1, n2)
 except ValueError:
-    print(ValueError)
+    
+        print (ValueError)
 
-n1=int(input("ingrese n1"))
-n2=int(input("ingrese n2"))
 
-print(division(n1,n2))
+print("division de lo ingresado es:", division(n1, n2))

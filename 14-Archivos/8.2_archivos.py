@@ -13,7 +13,7 @@ try:
     contador = 0
 
     for caracter in contenido:
-        # Si hay un espacio, salto o tabulacion se usa el boolean para decir que NO 
+        # Si hay un espacio, salto o tabulacion se usa el boolean para decir que NO
         # estamos dentro de una palabra.
         if caracter == ' ' or caracter == '\n' or caracter == '\t':
             in_palabra = False

@@ -2,14 +2,15 @@
 class errorconarchivo(Exception):
     pass
 
+
 try:
     archivo = open("archivoLectura.txt", "r")
-except errorconarchivo as error:
-    print(error)
-else:
+    print(archivo.read())
+    if not archivo:
+        raise FileNotFoundError("no existe el archivo")
 
-    archivo.read()
-    print("se lee el archivo")
+except FileNotFoundError:
+    print(FileNotFoundError)
 
 finally:
     print("se cierra archivo")
